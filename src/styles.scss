@@ -1,0 +1,410 @@
+@mixin icons-style {
+  width: 65px;
+  height: 30px;
+  cursor: pointer;
+  position: absolute;
+  left: 2%;
+}
+
+@mixin dispalyFlex {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin buttons-style {
+  width: 100px;
+  height: 30px;
+}
+
+@mixin edit-buttons {
+  margin: 20px;
+  width: 110px;
+  height: 60px;
+  font-size: x-large;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+}
+
+.upper-menu {
+  margin-top: 40px;
+}
+
+.upper-nav-bar {
+  direction: ltr;
+  list-style-type: none;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+  margin: 20px 0 0;
+  height: 50px;
+  float: left;
+  width: 590px;
+  margin: 14px 0 0;
+}
+
+.upper-nav-item {
+  padding: 15px;
+  color: black;
+  display: inline-block;
+  text-decoration: none;
+  border-left: 1px solid rgba(128, 128, 128, 0.346);
+}
+
+.logo {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  border: 0;
+  width: 214px;
+  height: 61px;
+}
+
+.upper-nav-item a {
+  color: black;
+  text-decoration: none;
+}
+
+.bottom-nav-bar {
+  list-style-type: none;
+  background-color: #005fae;
+  padding-left: 15px;
+  float: left;
+  width: 100%;
+  margin: 20px 0 0;
+  height: 50px;
+}
+
+.bottom-nav-bar li {
+  padding: 15px;
+  display: inline-block;
+  margin-right: 10px;
+  border-left: 1px solid rgba(128, 128, 128, 0.346);
+}
+
+.bottom-nav-bar li:hover {
+  background-color: gray;
+}
+
+.bottom-nav-bar li a {
+  color: white;
+  text-decoration: none;
+}
+
+.drop-list {
+  display: none;
+  background-color: gray;
+  padding: 0;
+  text-align: center;
+  width: auto;
+}
+
+.drop-list li {
+  margin: 0;
+  width: 100%;
+  & :hover {
+    color: black;
+  }
+}
+
+.drop-btn {
+  position: relative;
+  & :hover {
+    color: blue;
+  }
+}
+
+.drop-btn:hover .drop-list {
+  display: block;
+  position: absolute;
+  text-decoration: underline;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.drop-list > .nav-item {
+  color: black;
+}
+
+.drop-list > .nav-item:hover {
+  text-decoration: underline;
+}
+
+.info-li {
+  display: inline-block;
+  padding: 12px;
+  background-color: rgb(80, 153, 192);
+}
+
+.info-menu {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.paramswrapper {
+  margin-top: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #eaeaea;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f3f3f3),
+    to(#fff)
+  );
+}
+
+.filter-span {
+  margin-right: 30px;
+  border: 1px solid gray;
+  padding: 10px;
+  background-color: gray;
+  color: white;
+  font-size: small;
+  font-weight: 800;
+}
+
+.table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.title {
+  background-color: white;
+  font-size: medium;
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+  font-weight: 700;
+  background-color: #fff;
+  padding: 5px;
+  -webkit-box-shadow: 0 2px 3px rgb(0 0 0 / 5%);
+  -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 3px rgb(0 0 0 / 5%);
+}
+
+.data {
+  margin-left: 50px;
+}
+
+.data a {
+  font-size: medium;
+  text-decoration: none;
+  color: gray;
+  cursor: pointer;
+}
+
+.params-for-filter {
+  margin-top: 20px;
+}
+
+.filter-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.filter-option {
+  display: inline-block;
+  border-left: 1px solid rgba(128, 128, 128, 0.346);
+  padding: 10px;
+  font-size: 14px;
+}
+
+.options-for-filter {
+  margin-right: 240px;
+}
+
+.special {
+  border: none;
+}
+
+span {
+  font-size: 12px;
+}
+
+.filter-option a {
+  text-decoration: none;
+  color: gray;
+}
+
+.table-section {
+  & td {
+    display: flex;
+    width: 1060px;
+    border-bottom: 1px solid #eaeaea;
+    padding: 15px 0px 15px 0px;
+  }
+  & h2 {
+    color: rgb(90, 184, 90);
+    margin-right: 20px;
+  }
+  & h3 {
+    font-size: 16px;
+    color: gray;
+    margin-top: 10px;
+  }
+  & section {
+    position: absolute;
+    left: 13%;
+    margin-top: 40px;
+  }
+  & img {
+    margin-top: 15px;
+  }
+  & .edit {
+    @include icons-style;
+    @include edit-buttons;
+    left: 0;
+    width: 64px;
+    height: 45px;
+    font-size: larger;
+    margin-top: 20px;
+    background: darkcyan;
+  }
+  & .remove {
+    @include icons-style;
+    @include edit-buttons;
+    width: 100px;
+    height: 45px;
+    font-size: larger;
+    left: 0;
+    margin-top: 85px;
+    background: bisque;
+  }
+}
+
+.admin-container {
+  direction: ltr;
+  & .admin-header {
+    @include dispalyFlex;
+    margin-bottom: 30px;
+  }
+}
+.row-table {
+  display: flex;
+  align-items: flex-start;
+  & .params-grid {
+    display: grid;
+    margin-left: 40px;
+    margin-top: 20px;
+    & button {
+      @include buttons-style;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    & .title {
+      @include buttons-style;
+      @include dispalyFlex;
+      background: darkorange;
+    }
+    & #sortBy {
+      @include buttons-style;
+    }
+  }
+}
+
+.add-new-header {
+  @include dispalyFlex;
+}
+
+.add-new-laptop {
+  @include dispalyFlex;
+  flex-wrap: wrap;
+  align-items: center;
+  & .add-laptop {
+    @include dispalyFlex;
+    width: 135px;
+    height: 45px;
+    align-items: center;
+    margin-top: 10px;
+    font-size: larger;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: skyblue;
+  }
+}
+
+.add-new-laptop-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  & h4 {
+    margin: 10px 20px;
+  }
+  & input {
+    height: 25px;
+    width: 250px;
+  }
+}
+
+.main-edit {
+  @include dispalyFlex;
+  margin-top: 20%;
+  & .container {
+    width: 800px;
+    height: 700px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+    & h1 {
+      @include dispalyFlex;
+    }
+    & label {
+      font-size: x-large;
+      direction: ltr;
+      margin-top: 20px;
+    }
+    & input {
+      height: 30px;
+      direction: ltr;
+    }
+    & .content {
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+    }
+    & .buttons-div {
+      @include dispalyFlex;
+      & .save-button {
+        @include edit-buttons;
+        background: darkcyan;
+      }
+      & .cancel-button {
+        @include edit-buttons;
+        background: red;
+      }
+    }
+  }
+  & .main-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    & span {
+      margin-bottom: 20px;
+      font-size: x-large;
+    }
+    & input {
+      height: 30px;
+      width: 250px;
+      direction: initial;
+    }
+  }
+}
